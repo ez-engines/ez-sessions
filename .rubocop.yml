@@ -1,0 +1,38 @@
+require: rubocop
+
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: disable
+  Exclude:
+    - bin/*
+    - Guardfile
+    - vendor/**/*
+    - config.ru
+    - spec/dummy/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  IgnoredMethods: [
+    'describe',
+    'xdescribe',
+    'context',
+    'xcontext',
+    'it',
+    'xit',
+    'let',
+    'before',
+    'after',
+    'aggregate_failures'
+  ]
+
+Metrics/ClassLength:
+  Max: 150
+
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
