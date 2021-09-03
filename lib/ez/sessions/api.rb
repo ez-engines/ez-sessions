@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'jwt'
+
 module Ez
   module Sessions
     module API
